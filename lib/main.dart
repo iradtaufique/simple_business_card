@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         // SafeAre widget is used to avoid element in container to be on the edge of the screen
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 50.0,
@@ -42,55 +43,48 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 20.0,
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.phone,
-                    size: 30.0,
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  Text(
-                    '+ 555-444-3334',
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontFamily: 'Roboto',
-                    ),
-                  ),
-                ],
+            SizedBox(
+              height: 20.0,
+              width: 200.0,
+              child: Divider(
+                color: Colors.white,
               ),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(20.0),
+            Card(
               margin: EdgeInsets.symmetric(
                 vertical: 10.0,
                 horizontal: 20.0,
               ),
-              child: Row(
-                children: [
-                  Icon(Icons.email),
-                  SizedBox(
-                    width: 20.0,
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  size: 30.0,
+                ),
+                title: Text(
+                  '+ 555-444-3334',
+                  style: TextStyle(
+                    fontSize: 22.0,
+                    fontFamily: 'Roboto',
                   ),
-                  Text(
-                    'irad.flutter@gmail.com',
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 22.0,
-                    ),
-                  )
-                ],
+                ),
               ),
-            )
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 20.0,
+              ),
+              child: ListTile(
+                leading: Icon(Icons.email),
+                title: Text(
+                  'irad.flutter@gmail.com',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 22.0,
+                  ),
+                ),
+              ),
+            ),
           ],
         )),
       ),
