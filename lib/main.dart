@@ -85,6 +85,29 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
+            Card(
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 20.0,
+              ),
+              child: ListTile(
+                leading: Icon(
+                  Icons.house,
+                  size: 30.0,
+                ),
+                title: Text(
+                  '122, BLD 45, Washington ST',
+                  style: TextStyle(fontSize: 22.0, fontFamily: 'Roboto'),
+                ),
+              ),
+            ),
+            Text(
+              'Your Time Matter .',
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 20.0,
+              ),
+            ),
           ],
         )),
       ),
